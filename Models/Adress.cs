@@ -1,4 +1,5 @@
-﻿namespace proje.Models
+﻿using System.ComponentModel.DataAnnotations;
+namespace proje.Models
 {
     public class Address
     {
@@ -10,5 +11,6 @@
         public string City { get; set; }
 
         public string State { get; set; }
+        public string Street { get; set; }
     }
 }

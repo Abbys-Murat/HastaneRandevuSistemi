@@ -1,20 +1,20 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.Diagnostics;
-
+﻿using System.ComponentModel.DataAnnotations;
 namespace proje.Models
 {
-    public class AppUser 
+    public class AppUser
     {
-        public int Pace { get; set; }
+        [Key]
 
-        public int? mileage { get; set; }
-
-
+        public string Id { get; set; }
         
+
+
         public Address? Adresss { get; set; }
 
-        public ICollection<Club> Clubs { get; set; }
-        public ICollection<Race> Races { get; set; }
+        public ICollection<Polikinlik> Polikinliks { get; set; }
+        public ICollection<Doctor> Doctors { get; set; }    
+            
+        
 
-    }
+     }
 }

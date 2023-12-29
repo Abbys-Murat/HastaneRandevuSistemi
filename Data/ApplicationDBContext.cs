@@ -1,31 +1,25 @@
-﻿namespace proje.Data
+﻿using Microsoft.EntityFrameworkCore;
+using proje.Models;
+
+namespace proje.Data
 {
-    public class ApplicationDBContext : DBContext
+    public class ApplicationDbContext : DbContext
 
 
 
     {
-        public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) :base(options)
-        { 
+        
+        
+            public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+            {
+
+            }
+            public DbSet<Polikinlik> Polikinlikler { get; set; }
+            public DbSet<Doctor> Doktorlar { get; set; }
+            public DbSet<Address> Addresses { get; set; }
             
-        
-        
-        
         }
-        public DBSet<Race> Races { get; set; }
-
-        public DBSet<Club> Clubs { get; set; }
-        
-        public DBSet<Adresss> Addresses{ get; set; }
-
-
-
-
-
-
-
-
     }
 
 
-}
+
